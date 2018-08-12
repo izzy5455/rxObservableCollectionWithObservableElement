@@ -1,0 +1,22 @@
+{
+  "name": "rxObservableCollectionWithObservableElement",
+  "version": "0.1.0",
+  "summary": "A short description of rxObservableCollectionWithObservableElement.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/ismael.a.otero@gmail.com/rxObservableCollectionWithObservableElement",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "ismael.a.otero@gmail.com": "ismael.otero@allscripots.com"
+  },
+  "source": {
+    "git": "https://github.com/ismael.a.otero@gmail.com/rxObservableCollectionWithObservableElement.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "rxObservableCollectionWithObservableElement/Classes/**/*"
+}

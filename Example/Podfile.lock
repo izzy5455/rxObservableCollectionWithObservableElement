@@ -1,0 +1,16 @@
+PODS:
+  - rxObservableCollectionWithObservableElement (0.1.0)
+
+DEPENDENCIES:
+  - rxObservableCollectionWithObservableElement (from `../`)
+
+EXTERNAL SOURCES:
+  rxObservableCollectionWithObservableElement:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  rxObservableCollectionWithObservableElement: cdb0e00472dad9d7f073ca547dc22468a7d1684e
+
+PODFILE CHECKSUM: 88deee8a91d893ce266a0b6435e4e5c5fc2093a4
+
+COCOAPODS: 1.5.0

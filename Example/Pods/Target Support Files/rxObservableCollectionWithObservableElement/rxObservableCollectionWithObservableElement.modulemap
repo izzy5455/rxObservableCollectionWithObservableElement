@@ -1,0 +1,6 @@
+framework module rxObservableCollectionWithObservableElement {
+  umbrella header "rxObservableCollectionWithObservableElement-umbrella.h"
+
+  export *
+  module * { export * }
+}
