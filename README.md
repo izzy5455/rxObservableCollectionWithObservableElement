@@ -9,28 +9,6 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## Requirements
-
-## Installation
-
-rxObservableCollectionWithObservableElement is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod 'rxObservableCollectionWithObservableElement'
-```
-
-## Author
-
-ismael.a.otero@gmail.com, ismael.otero@allscripots.com
-
-## License
-
-rxObservableCollectionWithObservableElement is available under the MIT license. See the LICENSE file for more info.
-=======
-
-
-
 # Observable Collection
 
 This observable collection works just likes any other providing collection changed events on insertions and deletions. Where this differs is that each element must implement the NotifyChanged protocol discussed below. This allows not only to received event's if elements are inserted but receive events for object's that implement the NotifyChanged Protocol any time a Variable is modified.
@@ -92,3 +70,27 @@ t.append(something(string: "", int: 0, money: 100.0))
 t[1].money = 0 // or set the variable directly note this does not emit an collectionchanged event.
 
 ```
+
+
+
+## Requirements
+
+## Installation
+
+rxObservableCollectionWithObservableElement is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'rxObservableCollectionWithObservableElement'
+```
+
+## Author
+
+ismael.a.otero@gmail.com
+
+## License
+
+rxObservableCollectionWithObservableElement is available under the MIT license. See the LICENSE file for more info.
+=======
+
+
