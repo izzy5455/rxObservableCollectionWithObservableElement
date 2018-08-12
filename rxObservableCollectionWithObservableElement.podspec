@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'rxObservableCollectionWithObservableElement'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of rxObservableCollectionWithObservableElement.'
+  s.summary          = 'An observable collection with a Notify Element.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+	This observable collection works just likes any other providing collection changed events on insertions and deletions. Where this differs is that each element must implement the NotifyChanged protocol discussed below. This allows not only to received event's if elements are inserted but receive events for object's that implement the NotifyChanged Protocol any time a Variable is modified.
                        DESC
 
   s.homepage         = 'https://github.com/izzy5455/rxObservableCollectionWithObservableElement'
