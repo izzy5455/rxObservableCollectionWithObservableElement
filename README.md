@@ -1,5 +1,4 @@
 # rxObservableCollectionWithObservableElement
-<<<<<<< HEAD
 
 [![CI Status](https://img.shields.io/travis/ismael.a.otero@gmail.com/rxObservableCollectionWithObservableElement.svg?style=flat)](https://travis-ci.org/ismael.a.otero@gmail.com/rxObservableCollectionWithObservableElement)
 [![Version](https://img.shields.io/cocoapods/v/rxObservableCollectionWithObservableElement.svg?style=flat)](https://cocoapods.org/pods/rxObservableCollectionWithObservableElement)
