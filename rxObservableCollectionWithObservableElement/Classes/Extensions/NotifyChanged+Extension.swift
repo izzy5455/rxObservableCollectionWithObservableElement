@@ -8,8 +8,6 @@
 
 import Foundation
 
-
-
 extension NotifyChanged{
 	
 	func raiseChangeFor<A>(keyPath: AnyKeyPath, old:A, new:A) {
