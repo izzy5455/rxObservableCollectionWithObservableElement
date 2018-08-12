@@ -1,0 +1,2 @@
+# rxObservableCollectionWithObservableElement
+Observable Collection With A NotifyChanged Elelement
