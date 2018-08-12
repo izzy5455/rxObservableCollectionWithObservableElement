@@ -1,0 +1,6 @@
+use_frameworks!
+target 'rxObservableCollectionWithObservableElement_Tests' do
+  pod 'rxObservableCollectionWithObservableElement', :path => '../'
+  
+  
+end
