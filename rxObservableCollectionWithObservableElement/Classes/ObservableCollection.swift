@@ -9,10 +9,10 @@ import Foundation
 import RxSwift
 
 public struct ObservableCollection<T> : ExpressibleByArrayLiteral where T: NotifyChanged {
-	typealias arrayChangedType = (event:CollectionChangedEvent, element:[T])
+	public typealias arrayChangedType = (event:CollectionChangedEvent, element:[T])
 	public typealias collectionType = [T]
-	internal var rx: PublishSubject<arrayChangedType>!
-	internal var rxElements: collectionType
+	public var rx: PublishSubject<arrayChangedType>!
+	public var rxElements: collectionType
 	internal var rxChangeType:[arrayChangedType]
 	internal let disposeBag = DisposeBag()
 	public init(){
@@ -24,15 +24,19 @@ public struct ObservableCollection<T> : ExpressibleByArrayLiteral where T: Notif
 	public init(count:Int, repeatedValue:T){
 		rx = PublishSubject<arrayChangedType>()
 		rxElements = Array(repeating: repeatedValue, count: count)
-		rxChangeType =  [(CollectionChangedEvent(inserted:[1]),rxElements)]
+		rxChangeType = []
+		guard count > 0  else {
+			return
+		}
+		
+		rxChangeType =  [(.insertedIndices(Array(0...count)) , rxElements)]
 	}
 	
 	public init<S: Sequence>(_ s: S) where S.Iterator.Element == T{
 		rx = PublishSubject<arrayChangedType>()
 		rxElements = Array(s)
 		
-		rxChangeType = [(event: CollectionChangedEvent(
-							inserted:(0...rxElements.count).map {$0}),
+		rxChangeType = [(event: .insertedIndices((0...rxElements.count).map {$0}),
 							element: rxElements)]
 		
 		
@@ -40,8 +44,7 @@ public struct ObservableCollection<T> : ExpressibleByArrayLiteral where T: Notif
 	
 	public init(arrayLiteral elements: T...) {
 		rxElements = elements
-		rxChangeType = [(event: CollectionChangedEvent(
-						inserted:(0...rxElements.count).map {$0}),
+		rxChangeType = [(event: .insertedIndices((0...rxElements.count).map {$0}),
 						element: rxElements)]
 	}
 }
