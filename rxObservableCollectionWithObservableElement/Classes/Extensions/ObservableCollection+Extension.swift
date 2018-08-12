@@ -8,7 +8,7 @@
 
 import Foundation
 
-public extension ObservableCollection{
+ extension ObservableCollection{
 	
 	func arrayDidChange(event: arrayChangedType) {
 		rx.onNext(event)
@@ -24,7 +24,7 @@ public extension ObservableCollection{
 	}
 }
 
-public extension ObservableCollection: MutableCollection{
+ extension ObservableCollection: MutableCollection{
 	
 	
 	public mutating func reserveCapacity(_ minimumCapacity: Int) {
@@ -105,20 +105,20 @@ public extension ObservableCollection: MutableCollection{
 	
 }
 
-public extension ObservableCollection:Collection  {
-	typealias Element = T
+ extension ObservableCollection:Collection  {
+	public typealias Element = T
 	
-	typealias Index = collectionType.Index
+	public typealias Index = collectionType.Index
 	
 	public var startIndex: Index { get{ return rxElements.startIndex } }
 	
 	public var endIndex: Index { get{ return rxElements.endIndex } }
 	
-	func index(after i: Index) -> Index {
+	public func index(after i: Index) -> Index {
 		return rxElements.index(after: i)
 	}
 	
-	subscript(position:Index)-> T{
+	public subscript(position:Index)-> T{
 		get{
 			return rxElements[position]
 		}
