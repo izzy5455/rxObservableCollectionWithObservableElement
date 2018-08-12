@@ -8,7 +8,7 @@
 import Foundation
 import RxSwift
 
-struct ObservableCollection<T> : ExpressibleByArrayLiteral where T: NotifyChanged {
+public struct ObservableCollection<T> : ExpressibleByArrayLiteral where T: NotifyChanged {
 	typealias arrayChangedType = (event:CollectionChangedEvent, element:[T])
 	typealias collectionType = [T]
 	internal var rx: PublishSubject<arrayChangedType>!

@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension NotifyChanged{
+public extension NotifyChanged{
 	
 	func raiseChangeFor<A>(keyPath: AnyKeyPath, old:A, new:A) {
 		let tuple = (keyPath, old as Any, new as Any)

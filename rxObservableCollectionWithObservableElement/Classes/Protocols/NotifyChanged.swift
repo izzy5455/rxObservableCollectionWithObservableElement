@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-protocol NotifyChanged: class {
+public protocol NotifyChanged: class {
 	
 	func raiseChangeFor<A>(keyPath: AnyKeyPath, old:A, new:A)
 	func set<A>(keyPath: ReferenceWritableKeyPath<Self, A>, value: A)
