@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'rxObservableCollectionWithObservableElement'
-  s.version          = '0.1.0'
+  s.version          = '0.1.2'
   s.summary          = 'An observable collection with a Notify Element.'
 
 # This description is used to generate tags and improve search results.

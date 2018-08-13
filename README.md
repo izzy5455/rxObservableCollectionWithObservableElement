@@ -53,10 +53,25 @@ elementChanged = PublishSubject<(keyPath: AnyKeyPath, old: Any, new: Any)>()
 }
 var t = ObservableCollection<something>()
 
+t.subscribe(onNext: { [weak self] (tuple) in
+			// tuple is a combination of the following
+            // event: which is an enum holding the changed indices
+            // element: an array of the updated objects in your observable collection
+            guard let  strongSelf = self else { return }
 
-t.rx.subscribe { (event) in
-print(event.element?.event.updatedIndeces.count)
-}
+			switch tuple.event {
+				case .deletedIndices(let indices):
+					DispatchQueue.main.async {
+					//TODO: Some UI stuff can go here 
+					}
+					break
+				case .updatedIndices(let indices):
+					break
+				case .insertedIndices(let indices):
+					break
+			}
+		}).disposed(by: disposeBag)
+
 
 var elements = something(string: "", int: 0, money: 0.0)
 
