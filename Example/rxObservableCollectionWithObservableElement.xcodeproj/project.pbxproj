@@ -134,7 +134,6 @@
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = M68458CPXL;
 						LastSwiftMigration = 0900;
-						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
 			};
@@ -174,10 +173,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-rxObservableCollectionWithObservableElement_Tests/Pods-rxObservableCollectionWithObservableElement_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/rxObservableCollectionWithObservableElement/rxObservableCollectionWithObservableElement.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/rxObservableCollectionWithObservableElement.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,7 +338,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rxObservableCollectionWithObservableElement_Example.app/rxObservableCollectionWithObservableElement_Example";
 			};
 			name = Debug;
 		};
@@ -354,7 +356,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/rxObservableCollectionWithObservableElement_Example.app/rxObservableCollectionWithObservableElement_Example";
 			};
 			name = Release;
 		};

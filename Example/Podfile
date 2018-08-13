@@ -1,6 +1,7 @@
 use_frameworks!
 target 'rxObservableCollectionWithObservableElement_Tests' do
   pod 'rxObservableCollectionWithObservableElement', :path => '../'
-  
+  pod 'RxSwift'
+  pod 'RxCocoa'
   
 end
